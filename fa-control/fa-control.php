@@ -24,7 +24,7 @@
  * @since 0.1
  */
 function o2_add_font_awesome_control( $wp_customize ) {
-	class O2_Customzer_Font_Awesome_Control extends WP_Customize_Control {
+	class O2_Customizer_Font_Awesome_Control extends WP_Customize_Control {
 
 		public function enqueue() {
 			wp_enqueue_script( 'o2-fa-ddslick-min', O2_DIRECTORY_URI . 'fa-control/assets/js/jquery.ddslick.min.js', array("jquery"),'1.0.0', true  );
