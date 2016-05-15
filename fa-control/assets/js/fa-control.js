@@ -17,4 +17,4 @@ jQuery(document).ready(function($) {
 		o2_iconpicker_value();
 	});
 
-})();
+});
