@@ -1,20 +1,17 @@
-jQuery(document).ready(function($) {
+wp.customize.controlConstructor['icon-picker'] = wp.customize.Control.extend({
 
-	function o2_iconpicker_value() {
-		$('.o2-social-icon-control').each(function() {
-			var icon = $(this).find('.dd-selected-value').val();
-			$(this).find('.o2-social-icon-control-render').val(icon);
+	ready: function() {
+		'use strict';
+
+		var control = this,
+			element = control.container.find( '#o2-fa-icon-container' ),
+			container = control.id;
+
+		jQuery(element).ddslick();
+		jQuery('#' + element[0].id).on('click', function() {
+			var value = jQuery(this).find('.dd-selected-value').val();
+			control.setting.set(value);
 		});
 	}
-
-	$('.o2-social-icon-control').each(function() {
-		var id = $(this).find('select').attr('id');
-		$('#' + id).ddslick();
-		$('#' + id).on('click', function() {
-			o2_iconpicker_value();
-			$('.o2-social-icon-control-render').trigger('change');
-		});
-		o2_iconpicker_value();
-	});
 
 });

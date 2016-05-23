@@ -24,7 +24,9 @@
  * @since 0.1
  */
 function o2_add_font_awesome_control( $wp_customize ) {
-	class O2_Customizer_Font_Awesome_Control extends WP_Customize_Control {
+	class O2_Customzer_Font_Awesome_Control extends WP_Customize_Control {
+
+		public $type = 'icon-picker';
 
 		public function enqueue() {
 			wp_enqueue_script( 'o2-fa-ddslick-min', O2_DIRECTORY_URI . 'fa-control/assets/js/jquery.ddslick.min.js', array("jquery"),'1.0.0', true  );
@@ -36,15 +38,15 @@ function o2_add_font_awesome_control( $wp_customize ) {
 			if ( empty( $this->choices ) ) {
 				require O2_DIRECTORY . 'fa-control/fa-icons.php';
 				$this->choices = o2_font_awesome_list();
-			} 
+			}
+			$id = str_replace( '[', '-', str_replace( ']', '', $this->id ) );
 			$class = 'customize-control customize-control-' . $this->type; ?>
-			<li class="o2-social-icon-control <?php echo esc_attr( $class ); ?>">
+			<li class="<?php echo esc_attr( $class ); ?>" id="<?php echo esc_attr( $id ); ?>">
 				<?php $this->render_content(); ?>
 			</li>
 		<?php }
 
 		public function render_content() {
-			$id = 'customize-control-' . str_replace( '[', '-', str_replace( ']', '', $this->id ) );
 		?>
 			<label>
 				<?php if ( ! empty( $this->label ) ) : ?>
@@ -53,12 +55,11 @@ function o2_add_font_awesome_control( $wp_customize ) {
 				if ( ! empty( $this->description ) ) : ?>
 					<span class="description customize-control-description"><?php echo $this->description; ?></span>
 				<?php endif; ?>
-				<select id="<?php echo esc_attr( $id ); ?>">
+				<select class="o2-fa-icon-control" id="o2-fa-icon-container">
 					<?php foreach ( $this->choices as $value => $label ): ?>
 						<option value="<?php echo esc_attr( $value ); ?>" <?php echo selected( $this->value(), $value, false ); ?> data-iconsrc="<?php echo esc_attr( $value ); ?>"><?php echo esc_html( $label ); ?></option>
 					<?php endforeach; ?>
 				</select>
-				<input type="hidden" <?php $this->link(); ?> class="o2-social-icon-control-render" value=""/>
 			</label>
 		<?php }
 
