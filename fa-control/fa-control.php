@@ -5,10 +5,10 @@
  * This control adds a Font Awesome icon picker which allows you
  * to easily pick icons from Font Awesome.
  *
- * Font Awesome Icon Picker is a part of O2 library, which is a 
+ * Font Awesome Icon Picker is a part of O2 library, which is a
  * free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the
- * Free Software Foundation, either version 3 of the License, or 
+ * Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -18,7 +18,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this library. If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
  * @package O2 Customizer Library
  * @subpackage Font Awesome Icon Picker
  * @since 0.1
@@ -66,5 +66,3 @@ function o2_add_font_awesome_control( $wp_customize ) {
 	}
 }
 add_action( 'customize_register', 'o2_add_font_awesome_control' );
-
-?>

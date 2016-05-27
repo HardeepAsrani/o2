@@ -1,12 +1,11 @@
 <?php
 /**
  * This is a list of all the Font Awesome icons.
- * 
+ *
  * @package O2 Customizer Library
  * @subpackage Font Awesome Icon Picker
  * @since 0.1
  */
- 
 function o2_font_awesome_list() {
 	$icons = array(
 				'fa-glass' => 'fa-glass',
@@ -644,5 +643,3 @@ function o2_font_awesome_list() {
 			);
 	return $icons;
 }
-
-?>
