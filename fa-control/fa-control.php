@@ -29,9 +29,9 @@ function o2_add_font_awesome_control( $wp_customize ) {
 		public $type = 'icon-picker';
 
 		public function enqueue() {
-			wp_enqueue_script( 'o2-fa-ddslick-min', O2_DIRECTORY_URI . 'fa-control/assets/js/jquery.ddslick.min.js', array("jquery"),'1.0.0', true  );
-			wp_enqueue_script( 'o2-fa-contro', O2_DIRECTORY_URI . 'fa-control/assets/js/fa-control.js', array("jquery", "o2-fa-ddslick-min"),'1.0.0', true);
-			wp_enqueue_style( 'o2-fa-min', O2_DIRECTORY_URI . 'fa-control/assets/font-awesome/css/font-awesome.min.css', NULL, NULL, 'all' );
+			wp_enqueue_script( 'ddslick-min', O2_DIRECTORY_URI . 'fa-control/assets/js/jquery.ddslick.min.js', array('jquery') );
+			wp_enqueue_script( 'o2-fa-control', O2_DIRECTORY_URI . 'fa-control/assets/js/fa-control.js', array('jquery', 'ddslick-min'),'', true);
+			wp_enqueue_style( 'font-awesome', O2_DIRECTORY_URI . 'fa-control/assets/font-awesome/css/font-awesome.min.css');
 		}
 
 		protected function render() {
