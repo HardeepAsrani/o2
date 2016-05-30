@@ -63,14 +63,6 @@ function o2_add_code_control( $wp_customize ) {
 			}
 		}
 
-		protected function render() {
-			$id    = 'customize-control-' . str_replace( '[', '-', str_replace( ']', '', $this->id ) );
-			$class = 'customize-control customize-control-' . $this->type; ?>
-			<li id="<?php echo esc_attr( $id ); ?>"  class="o2-code-control <?php echo esc_attr( $class ); ?>">
-				<?php $this->render_content(); ?>
-			</li>
-		<?php }
-
 		public function render_content() {
 		?>
 			<label>

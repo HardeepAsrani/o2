@@ -34,19 +34,11 @@ function o2_add_font_awesome_control( $wp_customize ) {
 			wp_enqueue_style( 'font-awesome', O2_DIRECTORY_URI . 'fa-control/assets/font-awesome/css/font-awesome.min.css' );
 		}
 
-		protected function render() {
+		public function render_content() {
 			if ( empty( $this->choices ) ) {
 				require O2_DIRECTORY . 'fa-control/fa-icons.php';
 				$this->choices = o2_font_awesome_list();
 			}
-			$id    = str_replace( '[', '-', str_replace( ']', '', $this->id ) );
-			$class = 'customize-control customize-control-' . $this->type; ?>
-			<li class="<?php echo esc_attr( $class ); ?>" id="<?php echo esc_attr( $id ); ?>">
-				<?php $this->render_content(); ?>
-			</li>
-		<?php }
-
-		public function render_content() {
 		?>
 			<label>
 				<?php if ( ! empty( $this->label ) ) : ?>
