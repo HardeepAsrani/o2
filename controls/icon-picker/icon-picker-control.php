@@ -27,14 +27,14 @@ function o2_add_icon_picker_control( $wp_customize ) {
 	class O2_Customzer_Icon_Picker_Control extends WP_Customize_Control {
 
 		public $type = 'icon-picker';
-		
+
 		public $iconset = array();
 
 		public function to_json() {
 			if ( empty( $this->iconset ) ) {
 				$this->iconset = 'fa';
 			}
-			$iconset = $this->iconset;
+			$iconset               = $this->iconset;
 			$this->json['iconset'] = $iconset;
 			parent::to_json();
 		}
