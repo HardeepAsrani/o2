@@ -45,7 +45,7 @@ function o2_add_icon_picker_control( $wp_customize ) {
 			if ( in_array( $this->iconset, array( 'genericon', 'genericons' ) ) ) {
 				wp_enqueue_style( 'genericons', O2_DIRECTORY_URI . 'assets/genericons/genericons.css' );
 			} elseif ( in_array( $this->iconset, array( 'dashicon', 'dashicons' ) ) ) {
-				wp_enqueue_style( 'dashicons', O2_DIRECTORY_URI . 'assets/dashicons/dashicons.css' );
+				wp_enqueue_style( 'dashicons' );
 			} else {
 				wp_enqueue_style( 'font-awesome', O2_DIRECTORY_URI . 'assets/font-awesome/css/font-awesome.min.css' );
 			}
