@@ -24,7 +24,7 @@
  * @since 0.1
  */
 function o2_add_radio_buttons_control( $wp_customize ) {
-	class O2_Customzer_Radio_Buttons_Control extends WP_Customize_Control {
+	class O2_Customizer_Radio_Buttons_Control extends WP_Customize_Control {
 
 		public $type = 'radio-buttons';
 

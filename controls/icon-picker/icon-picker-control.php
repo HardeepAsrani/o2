@@ -24,7 +24,7 @@
  * @since 0.1
  */
 function o2_add_icon_picker_control( $wp_customize ) {
-	class O2_Customzer_Icon_Picker_Control extends WP_Customize_Control {
+	class O2_Customizer_Icon_Picker_Control extends WP_Customize_Control {
 
 		public $type = 'icon-picker';
 
