@@ -15,10 +15,12 @@ wp.customize.controlConstructor['o2-icon-picker'] = wp.customize.Control.extend(
 			icons = 'dashicons';
 		}
 
-		jQuery('#' + element).ddslick({iconset:icons});
-		jQuery('#' + element).on('click', function() {
-			var value = jQuery(this).find('.dd-selected-value').val();
-			control.setting.set(value);
+		jQuery( '#' + element ).ddslick({
+			iconset:icons
+		});
+		jQuery( '#' + element ).on( 'click', function() {
+			var value = jQuery( this ).find( '.dd-selected-value' ).val();
+			control.setting.set( value );
 		});
 	}
 
