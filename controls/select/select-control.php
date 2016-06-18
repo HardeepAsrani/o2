@@ -1,7 +1,11 @@
 <?php
 /**
+ * Select Customizer Control - O2 Customizer Library
  *
+ * This control adds a select list to the Customizer which allows
+ * you to pick an option from a drop down list.
  *
+ * Select is a part of O2 library, which is a
  * free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the
  * Free Software Foundation, either version 3 of the License, or
@@ -16,6 +20,7 @@
  * along with this library. If not, see <http://www.gnu.org/licenses/>.
  *
  * @package O2 Customizer Library
+ * @subpackage Select
  * @since 0.1
  */
 function o2_add_select_control( $wp_customize ) {
