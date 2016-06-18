@@ -1,4 +1,4 @@
-wp.customize.controlConstructor['icon-picker'] = wp.customize.Control.extend({
+wp.customize.controlConstructor['o2-icon-picker'] = wp.customize.Control.extend({
 
 	ready: function() {
 		'use strict';

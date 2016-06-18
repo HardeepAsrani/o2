@@ -26,7 +26,7 @@
 function o2_add_code_control( $wp_customize ) {
 	class O2_Customizer_Code_Control extends WP_Customize_Control {
 
-		public $type = 'code-editor';
+		public $type = 'o2-code-editor';
 
 		public function to_json() {
 			$this->json['choices'] = $this->choices;

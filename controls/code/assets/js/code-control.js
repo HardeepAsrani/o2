@@ -1,4 +1,4 @@
-wp.customize.controlConstructor['code-editor'] = wp.customize.Control.extend({
+wp.customize.controlConstructor['o2-code-editor'] = wp.customize.Control.extend({
 
 	ready: function() {
 		'use strict';

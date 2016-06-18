@@ -26,7 +26,7 @@
 function o2_add_icon_picker_control( $wp_customize ) {
 	class O2_Customizer_Icon_Picker_Control extends WP_Customize_Control {
 
-		public $type = 'icon-picker';
+		public $type = 'o2-icon-picker';
 
 		public $iconset = array();
 
