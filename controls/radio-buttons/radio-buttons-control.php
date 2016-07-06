@@ -41,10 +41,12 @@ function o2_add_radio_buttons_control( $wp_customize ) {
 				if ( ! empty( $this->description ) ) : ?>
 					<span class="description customize-control-description"><?php echo $this->description; ?></span>
 				<?php endif; ?>
+				<div class="button-group button-large" data-setting="align">
 				<?php foreach ( $this->choices as $value => $label ) : ?>
 					<input type="radio" class="o2-radio-buttons" id="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $value ); ?>" <?php $this->link(); checked( $this->value(), $value ); ?> />
-					<label for="<?php echo esc_attr( $value ); ?>"><?php echo esc_html( $label ); ?></label>
+					<label class="button" for="<?php echo esc_attr( $value ); ?>"><?php echo esc_html( $label ); ?></label>
 				<?php endforeach; ?>
+				</div>
 			</label>
 		<?php }
 
