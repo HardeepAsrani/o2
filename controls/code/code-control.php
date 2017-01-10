@@ -73,7 +73,7 @@ function o2_add_code_control( $wp_customize ) {
 					<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 				<?php endif;
 				if ( ! empty( $this->description ) ) : ?>
-					<span class="description customize-control-description"><?php echo $this->description; ?></span>
+					<span class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
 				<?php endif; ?>
 				<textarea <?php $this->link(); ?> class="o2-code-control-render"></textarea>
 			</label>

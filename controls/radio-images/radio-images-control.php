@@ -1,9 +1,9 @@
 <?php
 /**
- * Radio Buttonset Customizer Control - O2 Customizer Library
+ * Radio Images Customizer Control - O2 Customizer Library
  *
- * This control adds a radio buttonset to the Customizer which allows
- * you to pick an option from the buttonset.
+ * This control adds radio images to the Customizer which allows
+ * you to choose one of the listed images.
  *
  * Radio Buttonset is a part of O2 library, which is a
  * free software: you can redistribute it and/or modify it under
@@ -20,16 +20,16 @@
  * along with this library. If not, see <http://www.gnu.org/licenses/>.
  *
  * @package O2 Customizer Library
- * @subpackage Radio Buttonset
+ * @subpackage Radio Images
  * @since 0.1
  */
-function o2_add_radio_buttonset_control( $wp_customize ) {
-	class O2_Customizer_Radio_Buttonset_Control extends WP_Customize_Control {
+function o2_add_radio_images_control( $wp_customize ) {
+	class O2_Customizer_Radio_Images_Control extends WP_Customize_Control {
 
-		public $type = 'o2-radio-buttonset';
+		public $type = 'o2-radio-images';
 
 		public function enqueue() {
-			wp_enqueue_style( 'o2-radio-buttonset', O2_DIRECTORY_URI . 'controls/radio-buttonset/assets/css/radio-buttonset-control.css' );
+			wp_enqueue_style( 'o2-radio-images', O2_DIRECTORY_URI . 'controls/radio-images/assets/css/radio-images-control.css' );
 		}
 
 		public function render_content() {
@@ -41,10 +41,14 @@ function o2_add_radio_buttonset_control( $wp_customize ) {
 				if ( ! empty( $this->description ) ) : ?>
 					<span class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
 				<?php endif; ?>
-				<div class="button-group button-large" data-setting="align">
+				<div id="input_<?php echo esc_attr( $this->id ); ?>" class="image">
 				<?php foreach ( $this->choices as $value => $label ) : ?>
-					<input type="radio" class="o2-radio-buttonset" id="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $value ); ?>" <?php $this->link(); checked( $this->value(), $value ); ?> />
-					<label class="button" for="<?php echo esc_attr( $value ); ?>"><?php echo esc_html( $label ); ?></label>
+					<input class="image-select" type="radio" value="<?php echo esc_attr( $value ); ?>" name="_customize-radio-<?php echo esc_attr( $this->id ); ?>" id="<?php echo esc_attr( $this->id ); ?><?php echo esc_attr( $value ); ?>" <?php $this->link(); checked( $this->value(), $value ); ?> />
+						<label for="<?php echo esc_attr( $this->id ); echo esc_attr( $value ); ?>">
+							<img src="<?php echo esc_attr( $label ); ?>">
+							<span class="image-clickable"></span>
+						</label>
+					</input>
 				<?php endforeach; ?>
 				</div>
 			</label>
@@ -52,4 +56,4 @@ function o2_add_radio_buttonset_control( $wp_customize ) {
 
 	}
 }
-add_action( 'customize_register', 'o2_add_radio_buttonset_control' );
+add_action( 'customize_register', 'o2_add_radio_images_control' );

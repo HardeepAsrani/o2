@@ -70,7 +70,7 @@ function o2_add_icon_picker_control( $wp_customize ) {
 					<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 				<?php endif;
 				if ( ! empty( $this->description ) ) : ?>
-					<span class="description customize-control-description"><?php echo $this->description; ?></span>
+					<span class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
 				<?php endif; ?>
 				<select class="o2-icon-picker-icon-control" id="<?php echo esc_attr( $this->id ); ?>">
 					<?php foreach ( $this->choices as $value => $label ) : ?>
