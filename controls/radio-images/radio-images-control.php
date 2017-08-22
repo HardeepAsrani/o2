@@ -43,7 +43,7 @@ function o2_add_radio_images_control( $wp_customize ) {
 				<?php endif; ?>
 				<div id="input_<?php echo esc_attr( $this->id ); ?>" class="image">
 				<?php foreach ( $this->choices as $value => $label ) : ?>
-					<input class="image-select" type="radio" value="<?php echo esc_attr( $value ); ?>" name="_customize-radio-<?php echo esc_attr( $this->id ); ?>" id="<?php echo esc_attr( $this->id ); ?><?php echo esc_attr( $value ); ?>" <?php $this->link(); checked( $this->value(), $value ); ?> />
+					<input class="image-select" type="radio" value="<?php echo esc_attr( $value ); ?>" name="_customize-radio-<?php echo esc_attr( $this->id ); ?>" id="<?php echo esc_attr( $this->id ); ?><?php echo esc_attr( $value ); ?>" <?php $this->link(); checked( $this->value(), $value ); ?> >
 						<label for="<?php echo esc_attr( $this->id ); echo esc_attr( $value ); ?>">
 							<img src="<?php echo esc_attr( $label ); ?>">
 							<span class="image-clickable"></span>

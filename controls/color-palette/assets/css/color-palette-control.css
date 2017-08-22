@@ -1,0 +1,15 @@
+.customize-control-o2-color-palette .o2-color-palette-group input {
+    display: none;    
+}
+
+.customize-control-o2-color-palette .o2-color-palette-group .color-option {
+    width: 100%;
+}
+
+.customize-control-o2-color-palette .o2-color-palette-group .color-option span {
+    line-height: 2em;
+}
+
+.customize-control-o2-color-palette input:checked + .color-option {
+    background: #ddd;
+}
