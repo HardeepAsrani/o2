@@ -1,8 +1,10 @@
-//Title: Custom DropDown plugin by PC
-//Documentation: http://designwithpc.com/Plugins/ddslick
-//Author: PC 
-//Website: http://designwithpc.com
-//Twitter: http://twitter.com/chaudharyp
+/*
+Title: A custom DDSlick for O2
+Documentation: http://designwithpc.com/Plugins/ddslick
+Author: PC, Hardeep Asrani
+Website: http://designwithpc.com
+Twitter: http://twitter.com/chaudharyp
+*/
 
 (function ($) {
 
@@ -64,7 +66,7 @@
     //Public methods 
     methods.init = function (options) {
         //Preserve the original defaults by passing an empty object as the target
-        var options = $.extend({}, defaults, options);
+        options = $.extend({}, defaults, options);
 
         //Apply on all selected elements
         return this.each(function () {
@@ -101,8 +103,8 @@
                 obj.addClass('dd-container').append(ddSelectHtml).append(ddOptionsHtml);
 
                 //Get newly created ddOptions and ddSelect to manipulate
-                var ddSelect = obj.find('.dd-select'),
-                    ddOptions = obj.find('.dd-options');
+                ddSelect = obj.find('.dd-select');
+                ddOptions = obj.find('.dd-options');
 
                 //Set widths
                 ddOptions.css({ width: options.width });
@@ -133,7 +135,7 @@
                     selectedIndex: -1,
                     selectedItem: null,
                     selectedData: null
-                }
+                };
                 obj.data('ddslick', pluginData);
 
                 //Check if needs to show the select text, otherwise show selected or default selection
@@ -141,8 +143,7 @@
                     obj.find('.dd-selected').html(options.selectText);
                 }
                 else {
-                    var index = (options.defaultSelectedIndex != null && options.defaultSelectedIndex >= 0 && options.defaultSelectedIndex < options.data.length)
-                                ? options.defaultSelectedIndex
+                    var index = (options.defaultSelectedIndex != null && options.defaultSelectedIndex >= 0 && options.defaultSelectedIndex < options.data.length) ? options.defaultSelectedIndex
                                 : 0;
                     selectIndex(obj, index);
                 }
@@ -176,7 +177,7 @@
             if (options.index)
                 selectIndex($(this), options.index);
         });
-    }
+    };
 
     //Public method to open drop down
     methods.open = function () {
@@ -214,7 +215,7 @@
                 $this.removeData('ddslick').unbind('.ddslick').replaceWith(originalElement);
             }
         });
-    }
+    };
 
     //Private: Select index
     function selectIndex(obj, index) {
@@ -304,20 +305,6 @@
         obj.find('.dd-pointer').removeClass('dd-pointer-up').removeClass('dd-pointer-up');
     }
 
-    //Private: Adjust appearence for selected option (move title to middle), when no desripction
-    function adjustSelectedHeight(obj) {
-
-        //Get height of dd-selected
-        var lSHeight = obj.find('.dd-select').css('height');
-
-        //Check if there is selected description
-        var descriptionSelected = obj.find('.dd-selected-description');
-        var imgSelected = obj.find('.dd-selected-icon');
-        if (descriptionSelected.length <= 0 && imgSelected.length > 0) {
-            obj.find('.dd-selected-text').css('lineHeight', lSHeight);
-        }
-    }
-
     //Private: Adjust appearence for drop down options (move title to middle), when no desripction
     function adjustOptionsHeight(obj) {
         obj.find('.dd-option').each(function () {
@@ -329,6 +316,7 @@
             }
         });
     }
+
     function adjustSelectedHeight(obj) {
         obj.find('.dd-selected').each(function () {
             var $this = $(this);
