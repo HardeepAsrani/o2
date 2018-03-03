@@ -1,0 +1,44 @@
+.o2-toggle .customize-control-title {
+	display: inline-block;
+}
+
+.o2-toggle .o2-toggle-checkbox {
+	display: none;
+}
+
+.o2-toggle .o2-btn-toggle {
+	float: right;
+	padding: 0;
+	position: relative;
+	cursor: pointer;
+	border: none;
+	height: 1.5rem;
+	width: 3rem;
+	border-radius: 1.5rem;
+	color: #6b7381;
+	background: #bdc1c8;
+}
+
+.o2-toggle .o2-btn-toggle > .handle {
+	position: absolute;
+	top: 0.1875rem;
+	left: 0.1875rem;
+	width: 1.125rem;
+	height: 1.125rem;
+	border-radius: 1.125rem;
+	background: #fff;
+	transition: left .25s;
+}
+
+input[type=checkbox]:checked.o2-toggle-checkbox + button {
+	transition: background-color 0.25s;
+}
+
+input[type=checkbox]:checked.o2-toggle-checkbox + button > .handle {
+	left: 1.6875rem;
+	transition: left .25s;
+}
+
+input[type=checkbox]:checked.o2-toggle-checkbox + button {
+	background-color: #0085BA;
+}

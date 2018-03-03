@@ -9,6 +9,7 @@ O2 is a WordPress Customizer library for adding custom controls to the Customize
 - Radio Images
 - Range Slider
 - Select
+- Toggle
 
 Just breathe.
 

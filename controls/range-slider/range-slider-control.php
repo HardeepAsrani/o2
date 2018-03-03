@@ -5,7 +5,7 @@
  * This control adds range slider to the Customizer which allows
  * you to choose number from a range slider.
  *
- * Radio Buttonset is a part of O2 library, which is a
+ * Range Slider is a part of O2 library, which is a
  * free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the
  * Free Software Foundation, either version 3 of the License, or
