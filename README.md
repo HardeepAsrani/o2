@@ -93,6 +93,7 @@ $wp_customize->add_control(new O2_Customizer_Radio_Buttonset_Control($wp_customi
     )
 )));
 ```
+For more info, you may consider this [tutorial](http://www.hardeepasrani.com/2016/08/radio-buttonset-control-for-wordpress-customizer/).
 
 ## Syntax Highlighter Control For WordPress Customizer
 
@@ -124,6 +125,7 @@ $wp_customize->add_control(new O2_Customizer_Code_Control($wp_customize, 'o2_cod
     )
 )));
 ```
+For more info, you may consider this [tutorial](http://www.hardeepasrani.com/2016/06/syntax-highlighter-control-for-wordpress-customizer/).
 
 ## Font Awesome Icon Picker For WordPress Customizer
 
@@ -171,6 +173,7 @@ $wp_customize->add_control(new O2_Customizer_Icon_Picker_Control($wp_customize, 
     )
 )));
 ```
+For more info, you may consider this [tutorial](http://www.hardeepasrani.com/2016/05/font-awesome-icon-picker-for-wordpress-customizer/).
 
 # Contribute
 
