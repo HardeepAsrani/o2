@@ -15,20 +15,25 @@ Just breathe.
 
 # Documentation
 
-## Color scheme palette for WordPress
+## Installing and Setting up
 
-Place /o2/ folder in your theme (in the /inc/ directory, for example), and include it by adding the following code:
+- Just download this repository and dump it into your `inc` folder inside your theme folder.
+- Once you download, just add this code to your functions.php file
 ```
 define( 'O2_DIRECTORY', get_template_directory() . '/inc/o2/' );
 define( 'O2_DIRECTORY_URI', get_template_directory_uri() . '/inc/o2/' );
+```
+- Once you add this code, you are ready for the next mess! Now you may include the toolkits provided by this package further.
+
+## Color scheme palette for WordPress
+
+Install the Color Palette toolkit by adding this line of code to functions.php file.
+```
 require get_template_directory() . '/inc/o2/controls/color-palette/color-palette-control.php';
 ```
-
-First you need to define directory and directory URI of the /o2/ folder after that you need to include color-palette-control.php file.
-
 And that’s all you need to do.
 
-You can add it to your customizer like this:
+You can add it to your customizer by dumping this code into the `inc/customizer.php` or `functions.php` if you don't have customizer.php file:
 ```
 $wp_customize->add_setting( 'o2_color_palette', array(
 	'default' => 'green',
@@ -62,17 +67,13 @@ For more info, you may consider this [5 minute read](http://www.hardeepasrani.co
 
 ## Default Image alignment on WordPress Customizer
 
-Place /o2/ folder in your theme, and include it by adding the following code:
+Install the Image Alignment toolkit by adding this line of code to functions.php file.
 ```
-define( 'O2_DIRECTORY', get_template_directory() . '/inc/o2/' );
-define( 'O2_DIRECTORY_URI', get_template_directory_uri() . '/inc/o2/' );
 require get_template_directory() . '/inc/o2/controls/radio-buttonset/radio-buttonset-control.php';
 ```
-First you need to define directory and directory URI of the /o2/ folder after that you need to include radio-buttonset-control.php file.
-
 And that’s all you need to do.
 
-You can add it to your customizer like this:
+You can add it to your customizer by dumping this code into the `inc/customizer.php` or `functions.php` if you don't have customizer.php file:
 ```
 $wp_customize->add_setting( 'o2_radio_buttons', array(
     'default' => 'left',
@@ -97,17 +98,13 @@ For more info, you may consider this [tutorial](http://www.hardeepasrani.com/201
 
 ## Syntax Highlighter Control For WordPress Customizer
 
-Place /o2/ folder in your theme, and include it by adding the following code:
+Install the Syntax Highlighter toolkit by adding this line of code to functions.php file.
 ```
-define( 'O2_DIRECTORY', get_template_directory() . '/inc/o2/' );
-define( 'O2_DIRECTORY_URI', get_template_directory_uri() . '/inc/o2/' );
 require get_template_directory() . '/inc/o2/controls/code/code-control.php';
 ```
-First you need to define directory and directory URI of the /o2/ folder after that you need to include code-control.php file.
-
 And that’s all you need to do.
 
-You can add it to your customizer like this:
+You can add it to your customizer by dumping this code into the `inc/customizer.php` or `functions.php` if you don't have customizer.php file:
 ```
 $wp_customize->add_setting( 'o2_code', array(
     'capability' => 'edit_theme_options'
@@ -129,17 +126,13 @@ For more info, you may consider this [tutorial](http://www.hardeepasrani.com/201
 
 ## Font Awesome Icon Picker For WordPress Customizer
 
-Place /o2/ folder in your theme, and include it by adding the following code:
+Install the Icon-Picker toolkit by adding this line of code to functions.php file.
 ```
-define( 'O2_DIRECTORY', get_template_directory() . '/inc/o2/' );
-define( 'O2_DIRECTORY_URI', get_template_directory_uri() . '/inc/o2/' );
 require get_template_directory() . '/inc/o2/controls/icon-picker/icon-picker-control.php';
 ```
-First you need to define directory and directory URI of the /o2/ folder after that you need to include icon-picker-control.php file.
-
 And that’s all you need to do.
 
-You can add it to your customizer like this:
+You can add it to your customizer by dumping this code into the `inc/customizer.php` or `functions.php` if you don't have customizer.php file:
 ```
 $wp_customize->add_setting( 'o2_fa_icon_picker', array(
     'default' => 'fa-facebook',
