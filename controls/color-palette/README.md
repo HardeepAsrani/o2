@@ -1,8 +1,8 @@
-# Using the Color Palette
+# Color Palette control for WordPress
 
 ## Installing and Setting up
 
-- Hope you have downloaded and installed o2 on your theme. If you have installed that, then you may proceed for further steps.
+- [Download and Install O2 on your theme](../../README.md). If you have installed that, then you may proceed for further steps.
 
 ## Setting up Color Scheme palette for WordPress
 
@@ -41,5 +41,3 @@ $wp_customize->add_control(new O2_Customizer_Color_Palette_Control($wp_customize
 	'settings' => 'o2_color_palette'
 )));
 ```
-
-For more info, you may consider this [5 minute read](http://www.hardeepasrani.com/2017/10/color-palette-control-for-wordpress-customizer/).

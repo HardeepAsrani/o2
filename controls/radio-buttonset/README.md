@@ -1,8 +1,8 @@
-# Using the Color Palette
+# Default Image Align control for WordPress
 
 ## Installing and Setting up
 
-- Hope you have downloaded and installed o2 on your theme. If you have installed that, then you may proceed for further steps.
+- [Download and Install O2 on your theme](../../README.md). If you have installed that, then you may proceed for further steps.
 
 ## Default Image alignment for WordPress Customizer
 
@@ -33,4 +33,3 @@ $wp_customize->add_control(new O2_Customizer_Radio_Buttonset_Control($wp_customi
     )
 )));
 ```
-For more info, you may consider this [tutorial](http://www.hardeepasrani.com/2016/08/radio-buttonset-control-for-wordpress-customizer/).

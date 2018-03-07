@@ -1,8 +1,8 @@
-# Using the Icon Picker for WordPress
+# Icon Picker control for WordPress
 
 ## Installing and Setting up
 
-- Hope you have downloaded and installed o2 on your theme. If you have installed that, then you may proceed for further steps.
+- [Download and Install O2 on your theme](../../README.md). If you have installed that, then you may proceed for further steps.
 
 ## Icon Picker For WordPress Customizer
 
@@ -46,4 +46,3 @@ $wp_customize->add_control(new O2_Customizer_Icon_Picker_Control($wp_customize, 
     )
 )));
 ```
-For more info, you may consider this [tutorial](http://www.hardeepasrani.com/2016/05/font-awesome-icon-picker-for-wordpress-customizer/).

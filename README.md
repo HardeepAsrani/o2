@@ -1,6 +1,6 @@
 # What is it?
 
-o2 is a WordPress Customizer library for adding custom controls to the Customizer such as:
+O2 is a WordPress Customizer library for adding custom controls to the Customizer such as:
 
 - Color Palette
 - Code Highlighter
@@ -28,4 +28,4 @@ define( 'O2_DIRECTORY_URI', get_template_directory_uri() . '/inc/o2/' );
 
 # Contribute
 
-o2 lacks complete documentation. If you like the library and want to contribute, help with documentation will be appreciated.
+O2 lacks complete documentation. If you like the library and want to contribute, help with documentation will be appreciated.
